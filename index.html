@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>❤️ My Love - Neetu ❤️</title>
     <!-- Update the meta viewport tag for better mobile handling -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -376,8 +376,11 @@ p::first-letter {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(255, 75, 110, 0.4);
-    z-index: 1000;
+    z-index: 9999;
     transition: all 0.3s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .music-btn i {
@@ -453,6 +456,14 @@ p::first-letter {
 
     .music-btn i {
         font-size: 20px;
+    }
+
+    .music-btn:hover {
+        transform: translateX(-50%);
+    }
+
+    .music-btn.playing {
+        transform: translateX(-50%);
     }
 }
    </style>
